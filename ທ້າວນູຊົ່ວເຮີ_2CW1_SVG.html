@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Mr Nousua</title>
+          <style>
+            .xais {
+              text-align: center;
+              font-size: 30;
+              padding-top: 2px;
+              padding: 0%;
+              margin: 0%;
+              font-size: Phetsarath OT;
+            }
+            .name{
+              font-size: Phetsarath OT;
+            }
+            #ohdub{
+              display: none;
+            }
+            #ohliab{
+              display: none;
+            }
+            #as{
+              display: none;
+            }
+
+          </style>
+</head>
+<body>
+  
+          <center>    
+            <svg id="ohdub"  width="200" height="200">
+              <circle id=""  cx="80" cy="80" r="70" stroke="green" stroke-width="2" fill="yellow" />
+              <circle id=""  cx="40" cy="60" r="8" stroke="yellow" stroke-width="1" fill="black" />
+              <circle id=""  cx="100" cy="60" r="8" stroke="yellow" stroke-width="1" fill="black" />
+              <rect id="" x="50" y="80" rx="20" ry="20" width="30" height="50"
+               style="fill:black;stroke:black;stroke-width:5;opacity:0.5" />
+
+            </svg>
+            <svg id="ohliab"  width="200" height="200">
+              <circle id=""  cx="80" cy="80" r="70" stroke="green" stroke-width="2" fill="yellow" />
+               <circle id=""  cx="40" cy="60" r="20" stroke="yellow" stroke-width="1" fill="black" />
+               <circle id=""  cx="100" cy="60" r="20" stroke="yellow" stroke-width="1" fill="black" />
+               <rect id="" x="50" y="80" rx="20" ry="20" width="30" height="50"
+                style="fill:red;stroke:red;stroke-width:5;opacity:0.5" />
+               
+            </svg>
+            <svg id="detail"  width="200" height="200">
+              <circle id=""  cx="80" cy="80" r="70" stroke="green" stroke-width="2" fill="yellow" />
+               <circle id=""  cx="40" cy="60" r="20" stroke="yellow" stroke-width="1" fill="black" />
+               <circle id=""  cx="100" cy="60" r="20" stroke="yellow" stroke-width="1" fill="black" />
+               <rect id="" x="50" y="100" rx="20" ry="20" width="60" height="20"
+                style="fill:rgb(7, 177, 81);stroke:rgb(7, 177, 81);stroke-width:5;opacity:0.5" />
+               
+            </svg>
+            <svg id="as"  width="200" height="200">
+              <circle id=""  cx="80" cy="80" r="70" stroke="green" stroke-width="2" fill="yellow" />
+               <circle id=""  cx="40" cy="60" r="10" stroke="yellow" stroke-width="1" fill="black" />
+               <circle id=""  cx="100" cy="60" r="10" stroke="yellow" stroke-width="1" fill="black" />
+               <rect id="" x="25" y="100" rx="20" ry="20" width="110" height="20"
+                style="fill:red;stroke:red;stroke-width:5;opacity:0.5" />
+                
+            </svg>
+          </center>
+
+            <div class="xais">
+              
+              <h1>choose your feelings</h1>
+              <h2><input type="radio" name="xais" id="phem" value="phem"> <label for="phem">1. Detail</label>      
+                <input type="radio" name="xais" id="kho" value="kho"><label for="kho">2. Oh my god</label><br>
+              </h2>
+              
+              <h2><input type="radio"  name="xais" id="tsi" value="tsi"><label for="tsi">3. Feel good</label>         
+                4.<input type="radio" name="xais" id="yog" value="yog"> <label for="yog">4. Suspicious </label>
+              </h2><hr> <br><br>
+              <h2 class="name">ທ້າວ ນູຊົ່ວ ເຮີ ຫ້ອງ 2cw1 <br> ວຽກບ້ານ SVG</h1>
+
+            </div>
+</body>
+    <script>
+
+      // this get id for canvas and button
+      var phem=document.getElementById('phem');
+      var zoo=document.getElementById('tsi');
+      var kho=document.getElementById('kho');
+      var yog=document.getElementById('yog');
+
+      var ohdub= document.getElementById("ohdub");
+      var ohliab= document.getElementById("ohliab");
+      var detail= document.getElementById("detail");
+      var as= document.getElementById("as");
+        // this function 
+
+    // hauv qab no yog function thib 4
+    function ohdubf(){
+       ohdub.style.display="block";
+       detail.style.display="none";
+       ohliab.style.display="none";
+       as.style.display="none";
+       form.focus();
+       return true;
+    }
+    function ohliabf(){
+       ohdub.style.display="none";
+       ohliab.style.display="block";
+       detail.style.display="none";
+       as.style.display="none";
+       form.focus();
+       return true;
+    }
+    function asf(){
+       ohliab.style.display="none";
+       detail.style.display="none";
+       ohdub.style.display="none";
+       as.style.display="block";
+       form.focus();
+       return true;
+    }
+    function detailf(){
+       as.style.display="none";
+       ohliab.display="none";
+       ohdub.display.style="none";
+       detail.style.display="block";
+       form.focus();
+       return true;
+    }
+    yog.addEventListener('click',ohliabf);
+    kho.addEventListener('click',ohliabf);
+    zoo.addEventListener('click',asf);
+    phem.addEventListener('click',detailf);
+
+
+
+    </script>
+</html>
